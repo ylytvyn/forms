@@ -1,0 +1,188 @@
+:root {
+	--font: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+body {
+	font: 13px var(--font);
+	background: url('../images/bg.jpg') no-repeat top center;
+	background-size: cover;
+	padding-top: 1px;
+}
+
+.form {
+	width: 500px;
+	margin: 35px auto;
+	background: #fff;
+	color: #9eabad;
+}
+
+.form__header {
+	padding: 20px;
+	color: #6e7f7b;
+	background: #efe4aa;
+}
+
+.form__amount {
+	font-size: 36px;
+	letter-spacing: -.5px;
+	font-weight: 700;
+	float: right;
+	line-height: 34px;
+}
+
+.form__title {
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.form__total {
+	text-transform: uppercase;
+}
+
+.form-body {
+	padding: 30px 20px;
+}
+
+.form__fields {
+	margin-bottom: 20px;
+}
+
+.form__label {
+	font-weight: 700;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form__field {
+	border: 2px solid #bac8cb;
+	padding: 10px 15px;
+	font: 14px var(--font);
+	width: 100%;
+}
+
+.form__field:focus {
+	border-color: #82d4e7;
+}
+
+.form__field:invalid {
+	border-color: red;
+}
+
+.form__field:required {
+	border-color: orange;
+}
+
+.form__field:required:invalid {
+	border-color: red;
+}
+
+.form__field:disabled {
+	background: yellow;
+}
+
+.form__field:read-only {
+	background: lightgrey;
+}
+
+.form__field--select {
+	float: left;
+	width: 60%;
+}
+
+.form__field--short {
+	width: 40%;
+}
+
+.form__datalist {
+	float: right;
+	width: 35%;
+}
+
+.form__button {
+	width: 100%;
+	background: #25b167;
+	padding: 10px 20px;
+	color: #fff;
+	font: 700 15px var(--font);
+	cursor: pointer;
+}
+
+.form__reset {
+	background: none;
+	display: inline-block;
+	font: 700 15px var(--font);
+	color: #9eabad;
+	cursor: pointer;
+	border-bottom: 2px solid;
+	margin-top: 15px;
+}
+
+.form-wrapper-button {
+	text-align: center;
+}
+
+.newsletter {
+	padding: 0 20px 30px;
+}
+
+.newsletter__label input {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 10px;
+	-webkit-appearance: none;
+	outline: 2px solid #bac8cb;
+	border: 3px solid transparent;
+}
+
+.newsletter__label input:checked {
+	background: #25b167;
+	border-color: #fff;
+}
+
+.newsletter__label p {
+	font-size: 15px;
+	line-height: 16px;
+}
+
+.form__radio {
+	font-size: 15px;
+	display: block;
+	margin-bottom: 3px;
+}
+
+.form__radio input {
+	width: 15px;
+	height: 15px;
+	position: relative;
+	top: 2px;
+}

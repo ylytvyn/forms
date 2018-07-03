@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Forms">
+	<meta name="author" content="Julianka">
+	<title>Forms</title>
+
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="form">
+
+		<div class="form__header">
+			<p class="form__amount">$88</p>
+			<h1 class="form__title">Harold Finch</h1>
+			<p class="form__total">Your Total</p>
+		</div>
+		<form action="#" method="get" class="form-body" id="form">
+			<div class="form__fields">
+				<label class="form__label" for="field-username">Username</label>
+				<input type="text" name="username" class="form__field" id="field-username" required>
+			</div>
+			<div class="form__fields">
+				<label class="form__label" for="field-email">Email</label>
+				<input type="email" name="email" class="form__field" id="field-email" value="example@gmail.com" readonly>
+			</div>
+			<div class="form__fields">
+				<label class="form__label" for="field-creditcard">Credit card number</label>
+				<input type="number" name="creditcard" class="form__field" id="field-creditcard" min="0" disabled>
+			</div>
+			<div class="form__fields clear">
+				<label class="form__label">Expiration date</label>
+				<select class="form__field form__field--select">
+					<optgroup label="Winter">
+						<option value="Dec">December</option>
+						<option value="Jan">January</option>
+						<option value="Feb">February</option>
+					</optgroup>
+					<optgroup label="Summer">
+						<option value="Jun">June</option>
+						<option value="Jul">July</option>
+						<option value="Aug">August</option>
+					</optgroup>
+				</select>
+				<div class="form__datalist">
+					<input class="form__field" type="text" name="year" placeholder="Year" list="form-year">
+					<datalist id="form-year">
+						<option value="2018">2018</option>
+						<option value="2008">2008</option>
+						<option value="1998">1998</option>
+						<option value="1988">1988</option>
+						<option value="1978">1978</option>
+					</datalist>
+				</div>
+			</div>
+			<div class="form__fields">
+				<label class="form__label" for="field-cvv">CVV</label>
+				<input type="password" name="cvv" minlength="3" maxlength="4" class="form__field form__field--short" id="field-cvv">
+				<p class="form__info">3 or 4 digits - <a href="#">view example</a></p>
+			</div>
+
+			<div class="form__fields">
+				<label class="form__label" for="field-date">Date</label>
+				<input type="date" name="date" class="form__field" id="field-date">
+			</div>
+
+			<div class="form__fields">
+				<label class="form__label">Gender</label>
+				<label class="form__radio">
+					<input type="radio" name="gender" value="male" checked> Male
+				</label>
+				<label class="form__radio">
+					<input type="radio" name="gender" value="female"> Female
+				</label>
+			</div>
+
+			<div class="form__fields">
+				<label class="form__label" for="field-username">Username</label>
+				<input type="text" name="username" class="form__field" id="field-username">
+			</div>
+
+			<button type="submit" class="form__button">Pay</button>
+			<div class="form-wrapper-button">
+				<button type="reset" class="form__reset">Cancel order</button>
+			</div>
+		</form>
+
+		<div class="newsletter">
+			<label class="newsletter__label">
+				<input type="checkbox" name="subscribe" value="true" form="form" checked>
+				<p>Subscribe to news</p>
+			</label>
+		</div>
+	</div>
+
+
+<!-- LiveReload Script -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
